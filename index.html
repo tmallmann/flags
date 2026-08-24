@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Treino de Bandeiras</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- TELA INICIAL -->
+    <div class="game start-screen" id="startScreen">
+
+        <h1>🌎 Treino de Bandeiras</h1>
+
+        <p class="subtitle">
+            Teste seus conhecimentos sobre as bandeiras dos países!
+        </p>
+
+        <div class="start-info">
+            <div>🌎 195 países</div>
+            <div>❤️ Vidas</div>
+            <div>⏱️ Cronômetro</div>
+            <div>🏆 Pontuação</div>
+        </div>
+
+        <button class="start-button" onclick="startGame()">
+            ▶️ Iniciar jogo
+        </button>
+
+    </div>
+
+
+    <!-- JOGO -->
+    <div class="game" id="game">
+
+        <h1>🌎 Treino de Bandeiras</h1>
+
+        <div class="subtitle">
+            Qual país possui esta bandeira?
+        </div>
+
+
+        <!-- ESTATÍSTICAS -->
+
+        <div class="topbar">
+
+            <div class="stat">
+                <div class="stat-label">Pontos</div>
+                <div class="stat-value" id="score">0</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Vidas</div>
+                <div class="stat-value" id="lives">❤️❤️❤️</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Sequência</div>
+                <div class="stat-value streak" id="streak">0</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Recorde</div>
+                <div class="stat-value" id="best">0</div>
+            </div>
+
+        </div>
+
+
+        <!-- DIFICULDADE -->
+
+        <div class="difficulty">
+
+            <button data-level="easy" onclick="setDifficulty('easy')">
+                Fácil
+            </button>
+
+            <button data-level="medium" onclick="setDifficulty('medium')">
+                Médio
+            </button>
+
+            <button data-level="hard" onclick="setDifficulty('hard')">
+                Difícil
+            </button>
+
+        </div>
+
+
+        <!-- CRONÔMETRO -->
+
+        <div class="timer-container">
+
+            <div class="timer-bar">
+                <div id="timerBar"></div>
+            </div>
+
+        </div>
+
+
+        <!-- BANDEIRA -->
+
+        <div class="flag-area">
+
+            <img
+                id="flag"
+                src=""
+                alt="Bandeira"
+            >
+
+            <div class="question">
+                Qual é o país desta bandeira?
+            </div>
+
+
+            <!-- RESPOSTA -->
+
+            <div class="answer-row">
+
+                <input
+                    id="answer"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Digite o nome do país..."
+                >
+
+                <button
+                    id="submit"
+                    onclick="checkAnswer()"
+                >
+                    Responder
+                </button>
+
+            </div>
+
+
+            <!-- FEEDBACK -->
+
+            <div
+                class="feedback"
+                id="feedback"
+            ></div>
+
+        </div>
+
+
+        <!-- PROGRESSO -->
+
+        <div
+            class="progress"
+            id="progress"
+        ></div>
+
+
+        <!-- CONTROLES -->
+
+        <div class="controls">
+
+            <button
+                class="secondary"
+                onclick="giveHint()"
+            >
+                💡 Dica
+            </button>
+
+            <button
+                class="secondary"
+                onclick="skipQuestion()"
+            >
+                ⏭️ Pular
+            </button>
+
+            <button
+                class="secondary"
+                onclick="restartGame()"
+            >
+                🔄 Reiniciar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- FIM DE JOGO -->
+
+    <div
+        class="game game-over"
+        id="gameOver"
+    >
+
+        <h2>🏁 Fim de jogo!</h2>
+
+        <div>
+            Sua pontuação:
+        </div>
+
+        <div
+            class="final-score"
+            id="finalScore"
+        >
+            0
+        </div>
+
+        <div id="finalMessage"></div>
+
+        <br>
+
+        <button
+            class="start-button"
+            onclick="restartGame()"
+        >
+            🔄 Jogar novamente
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
