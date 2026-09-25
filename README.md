@@ -1,6 +1,6 @@
 ## 🏳️ Flags
 
-Um jogo educativo e divertido para testar e aprimorar seus conhecimentos sobre as bandeiras dos países. <br> 
+Um jogo educativo para testar e aprimorar seus conhecimentos sobre as bandeiras dos países. <br> 
 Identifique a bandeira, digite o nome do país e acumule pontos enquanto enfrenta desafios com tempo e diferentes níveis de dificuldade.
 
 - 🎯 195 países.
